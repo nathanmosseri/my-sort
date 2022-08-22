@@ -23,7 +23,7 @@ function App() {
       setLoginSuccess = {setLoginSuccess}
     />
   return (
-    <div className={loginPage? "loginDiv" : "app"}>
+    <div className={loginSuccess? "app" : "loginDiv"}>
       {renderedPage}
     </div>
   );
