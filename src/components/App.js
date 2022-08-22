@@ -4,7 +4,7 @@ import MainContainer from "./MainComponent/MainContainer";
 import '../App.css';
 
 function App() {
-  const [loginPage, setPage] = useState(true)
+
   const [loginSuccess, setLoginSuccess] = useState(false)
   const [usersLogin, setUserData] = useState([])
 
