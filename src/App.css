@@ -1,0 +1,81 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+html { font-family: 'Inter var', sans-serif; }
+}
+div.app {
+    background-color: white
+}
+div.loginDiv {
+    height: 100vh;
+    max-height: 100%;
+    overflow: auto;
+    background: linear-gradient(
+        to right,
+        #222E59 0%,
+        #222E59 50%,
+        white 50%,
+        white 100%
+    )
+}
+
+div.welcomeTitle {
+    color: white;
+    position: absolute;
+    left: 8%;
+    top:33%;
+    width: max-content;
+}
+div.welcomeTitle h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+    margin-bottom: -3rem;
+}
+div.welcomeTitle h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+div#loginForm{
+    color: black;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 350px;
+    width: 200px;
+    top: 30%;
+    right:16%;
+    width: 200px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+div#loginForm h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+.formInputs{
+    margin-bottom: 10px;
+    width: 200px;
+    height: 25px;
+    background-color: rgb(207, 207, 207);
+    border: 0px
+}
+
+button#loginBtn{
+    border: 2px;
+    background-color: rgb(3, 169, 3);
+    padding: 7px 79px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+}
