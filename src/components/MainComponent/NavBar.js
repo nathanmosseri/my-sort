@@ -5,12 +5,11 @@ const NavBar = () => {
     return (
         <div id= 'nav-bar'>
         <NavLink exact to='/'>
-            Home
+            Algorithm Visualizer
         </NavLink>
         <NavLink to='/settings'>
-            Settings
+            Account Settings
         </NavLink>
-        
         </div>
     )
 }

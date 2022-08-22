@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import userimage from "/Users/mac/Desktop/p3mysort/my-sort/src/images/login.png"
+import { Link, Route } from "react-router-dom";
+// import userimage from "/Users/nathanmosseri/Development/code/phase-2/my-sort/src/images"
 
 export default function Login ({usersData, loginSuccess, setLoginSuccess}){
     console.log(usersData)
@@ -54,7 +55,7 @@ export default function Login ({usersData, loginSuccess, setLoginSuccess}){
         </div>
         <div id = "loginForm">
             <form onSubmit ={handleLogin}>
-                <img src = {userimage} alt = "loginpic"/>
+                {/* <img src = {userimage} alt = "loginpic"/> */}
                 <h3>Login</h3>
                 <input 
                     type = "text"

@@ -1,9 +1,6 @@
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom"; 
 import SideBar from './SideBar'
-import BubbleInfo from "./BubbleInfo";
-import SelectionInfo from "./SelectionInfo";
-import QuickSortInfo from "./QuickSortInfo";
+
 
 const AlgoVisualizer = () => {
 
