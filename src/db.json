@@ -1,14 +1,28 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "tsering123",
-            "password": "password"
-        },
-        {
-            "id": 2,
-            "username": "nathan123",
-            "password": "password"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Tsering Tsering",
+      "username": "tsering123",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "name": "Nathan Something",
+      "username": "nathan123",
+      "password": "password"
+    },
+    {
+      "name": "test",
+      "username": "test",
+      "password": "test",
+      "id": 3
+    },
+    {
+      "name": "Kevin",
+      "username": "kevinisgay",
+      "password": "123",
+      "id": 4
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import userimage from "/Users/mac/Desktop/p3mysort/my-sort/src/images/login.png"
+import userimage from "../images/login.png"
+import "./login.css"
 
-export default function Login ({usersData, loginSuccess, setLoginSuccess}){
-    console.log(usersData)
+export default function Login ({usersData, loginSuccess, setLoginSuccess, handleRenderSignUpForm,setUserId}){
     const initialState = {
         username : "",
         password : ""
@@ -16,42 +16,36 @@ export default function Login ({usersData, loginSuccess, setLoginSuccess}){
             [name]:value}
         )
     }
+    
+    let formUsername = loginCredentials.username  
+    let formPassword = loginCredentials.password
 
     const handleLogin = (e) =>{
         e.preventDefault()
-        let usernameId ='none';
-        let passwordId= 'none';    
+        let usernameId = 0;
+        let passwordId = 9;    
         usersData.forEach((user)=>{
-            if(user.username === loginCredentials.username.value){
-                usernameId = loginCredentials.id
-            } else {
-                alert('no match username')
+            if(user.username === formUsername){
+                usernameId = user.id
             }
-        })
-        usersData.forEach((user)=>{
-            if(user.password === loginCredentials.password.value){
+
+            if(user.password === formPassword){
                 passwordId = user.id
-            } else {
-                alert('no match password')
             }
         })
 
-        if(usernameId ===passwordId && usernameId != null && passwordId != null) {
+        if(usernameId === passwordId) {
+            setUserId(passwordId)
             let correctLogin = !loginSuccess
             setLoginSuccess(correctLogin)
         } else {
-            alert('doesnt match')
+            console.log('doesnt match')
         }
     }
     
+
     return(
-    <>
-        <div className = "welcomeTitle">
-            <div>
-                <h2>Welcome to</h2>
-                <h1>@mySORT</h1>
-            </div>
-        </div>
+    
         <div id = "loginForm">
             <form onSubmit ={handleLogin}>
                 <img src = {userimage} alt = "loginpic"/>
@@ -73,9 +67,8 @@ export default function Login ({usersData, loginSuccess, setLoginSuccess}){
                     onChange = {handleLoginCredentials}
                 ></input>
                 <button id = "loginBtn">Sign In</button>
-                <h4><u>Create An Account</u></h4>
+                <h4 onClick = {handleRenderSignUpForm}><u>Create An Account</u></h4>
             </form>
         </div>
-    </>
     )
 }
