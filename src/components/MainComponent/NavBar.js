@@ -13,6 +13,7 @@ const NavBar = ({loginCredentials}) => {
         <p id="hello-user">Hello, {loginCredentials.username}</p>
         <form>
         <button type="submit">Log Out</button>
+        
         </form>
         </div>
     )
