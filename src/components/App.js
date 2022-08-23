@@ -8,6 +8,11 @@ function App() {
 
   const [loginSuccess, setLoginSuccess] = useState(false)
   const [usersLogin, setUserData] = useState([])
+  const initialState = {
+        username : "",
+        password : ""
+    }
+    const[loginCredentials, setCredential] = useState(initialState)
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
@@ -17,11 +22,13 @@ function App() {
 
 
   const renderedPage = loginSuccess? 
-    <MainContainer/> : 
+    <MainContainer loginCredentials={loginCredentials}/> : 
     <Login 
       usersData = {usersLogin}
       loginSuccess = {loginSuccess}
       setLoginSuccess = {setLoginSuccess}
+      loginCredentials = {loginCredentials}
+      setCredential = {setCredential}
     />
   return (
     <div className={loginSuccess? "app" : "loginDiv"}>

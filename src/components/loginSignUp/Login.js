@@ -2,13 +2,8 @@ import React, {useState} from "react";
 import { Link, Route } from "react-router-dom";
 // import userimage from "/Users/nathanmosseri/Development/code/phase-2/my-sort/src/images"
 
-export default function Login ({usersData, loginSuccess, setLoginSuccess}){
+export default function Login ({setCredential, loginCredentials, usersData, loginSuccess, setLoginSuccess}){
     console.log(usersData)
-    const initialState = {
-        username : "",
-        password : ""
-    }
-    const[loginCredentials, setCredential] = useState(initialState)
 
     const handleLoginCredentials = (e)=>{
         const{name,value} = e.target

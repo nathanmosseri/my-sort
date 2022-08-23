@@ -9,10 +9,10 @@ import Settings from "./Settings";
 import SignUp from "../loginSignUp/Signup";
 import Login from "../loginSignUp/Login";
 
-const MainPage = () => {
+const MainPage = ({loginCredentials}) => {
     return (
        <div>
-        <NavBar/>
+        <NavBar loginCredentials={loginCredentials}/>
         <Switch>
             <Route exact path='/'>
                 <AlgoVisualizer/>
