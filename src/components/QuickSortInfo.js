@@ -34,7 +34,60 @@ const QuickSortInfo = () => {
                 until the entire array is sorted.
             </p>
 
-            <table className="info-table">
+            <h3>How Quick Sort Passes Through an Array</h3>
+            <p>Consider the array arr = [10, 80, 30, 90, 40, 50, 70]</p>
+            <ol>
+                <li>Indexes:  0   1   2   3   4   5   6 </li>
+                <li>low = 0, high =  6, pivot = arr[h] = 70</li>
+                <li>Initialize index of smaller element, i = -1</li>
+                <li>Traverse elements from j = low to high-1</li>
+                    <ul>
+                        <li>j = 0: Since arr[j] &#60;= pivot, do i++ and swap(arr[i], arr[j])</li>
+                        <li>i = 0 </li>
+                    </ul>
+                <li> No change as i and j are same</li>
+                    <ul>
+                        <li>arr = [10, 80, 30, 90, 40, 50, 70]</li>
+                    </ul>
+                <li>j = 1: Since arr[j] &gt; pivot, do nothing</li>
+                <li>j = 2 : Since arr[j] &#60;= pivot, do i++ and swap(arr[i], arr[j])</li>
+                <li>i = 1</li>
+                <li>We swap 80 and 30 </li>
+                    <ul>
+                        <li>[10, <strong>80</strong>, <strong>30</strong>, 90, 40, 50, 70] -&gt; [10, <strong>30</strong>, <strong>80</strong>, 90, 40, 50, 70]</li>
+                    </ul>
+                <li>j = 3 : Since arr[j] &gt; pivot, do nothing // No change in i and arr[]</li>
+                <li>j = 4 : Since arr[j] &#60;= pivot, do i++ and swap(arr[i], arr[j])</li>
+                <li>i = 2</li>
+                <li>80 and 40 Swapped</li>
+                    <ul>
+                        <li>[10, 30, <strong>80</strong>, 90, <strong>40</strong>, 50, 70] -&gt; [10, 30, <strong>40</strong>, 90, <strong>80</strong>, 50, 70]</li>
+                    </ul>
+                <li>j = 5 : Since arr[j] &#60;= pivot, do i++ and swap arr[i] with arr[j] </li>
+                <li>i = 3 </li>
+                <li>90 and 50 Swapped </li>
+                    <ul>
+                        <li>[10, 30, 40, <strong>90</strong>, 80, <strong>50</strong>, 70] -&gt; [10, 30, 40, <strong>50</strong>, 80, <strong>90</strong>, 70] </li>
+                    </ul>
+                <li>We come out of loop because j is now equal to high-1.</li>
+                <li>Finally we place pivot at correct position by swapping arr[i+1] and arr[high] (or pivot) </li>
+                <li>80 and 70 Swapped </li>
+                    <ul>
+                        <li>[10, 30, 40, 50, <strong>80</strong>, 90, <strong>70</strong>] -&gt; [10, 30, 40, 50, <strong>70</strong>, 90, <strong>80</strong>] </li>
+                    </ul>
+                <li>Now 70 is at its correct place. All elements smaller than 70 are before it and all elements greater than 70 are after it.</li>
+                <li>Since quick sort is a recursive function, we call the partition function again at left and right partitions</li>
+                <li>Again call function at right part and swap 80 and 90</li>
+                    <ul>
+                        <li>[10, 30, 40, 50, 70, <strong>90</strong>, <strong>80</strong>] -&gt; [10, 30, 40, 50, 70, <strong>80</strong>, <strong>90</strong>]</li>
+                    </ul>
+                <li>Array is now sorted</li>
+                    <ul>
+                        <li>arr = [10, 30, 40, 50, 70, 80, 90]</li>
+                    </ul>
+            </ol>
+
+            <table className="pros-cons">
                 <tr>
                     <th>Pros</th>
                     <th>Cons</th>
@@ -50,6 +103,19 @@ const QuickSortInfo = () => {
                 <tr>
                     <td>Because it sorts in place, no additional storage is required as well</td>
                     <td>If the sorting element is integers than radix sort is more efficient than quick sort.</td>
+                </tr>
+            </table>
+            <h3 className="algo-time-complexity">Time Complexity</h3>
+            <table className="time-complexity-table">
+                <tr>
+                    <th>Best Case (numbers already sorted)</th>
+                    <th>Worst Case</th>
+                    <th>Average Case</th>
+                </tr>
+                <tr>
+                    <td>O(n log n)</td>
+                    <td>O(n log n)</td>
+                    <td>O(n²)</td>
                 </tr>
             </table>
 

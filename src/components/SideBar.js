@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 const SideBar = () => {
     return (
         <div>
-            <h2>bubble sort
+            <h2>Bubble Sort
         <NavLink to='/bubbleInfo'>
             ℹ️
         </NavLink>
         </h2>
-        <h2>selection sort
+        <h2>Selection Sort
         <NavLink to='/selectionInfo'>
             ℹ️
         </NavLink>
