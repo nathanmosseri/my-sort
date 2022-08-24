@@ -8,6 +8,7 @@
 .arrBar {
     max-width: 280px;
     min-width: 2px;
+    width:2px;
     display: inline-block;
     margin: 0 1px;
 }
