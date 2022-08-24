@@ -1,0 +1,21 @@
+.logo, .greeting, .settings, .signOut{
+    display: inline-block;
+    color: White;
+}
+
+.logo{
+    margin-right: 60%;
+    margin-left: 2%;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+.greeting, .settings, .signOut{
+    margin-right:3%;
+}
+
+.greeting{
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    margin-left:1%;
+}

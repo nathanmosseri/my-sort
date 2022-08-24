@@ -1,0 +1,28 @@
+p.labels{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 2px;
+    font-weight: 300;
+    margin-left: 50px
+}
+input.slider{
+    margin-left: 50px;
+    width: 200px;
+}
+
+div.arraySettings{
+    position: relative;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+#generateArr {
+    background-color: #222E59;
+    padding: 8px 28px;
+    border: 1px;
+    border-radius: 5px;
+    color:white;
+    font-size: 20px;
+    margin-left:28px ;
+    margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+.arrContainer {
+    position: absolute;
+    bottom: 0px;
+    width: inherit;
+    text-align: center;
+}
+
+.arrBar {
+    max-width: 280px;
+    min-width: 2px;
+    display: inline-block;
+    margin: 0 1px;
+}

@@ -1,0 +1,21 @@
+div#arraySettings{
+    height: 250px;
+    border-bottom: 1px solid white;
+}
+div#algoSettings{
+    height: 250px;
+    border-bottom: 1px solid white;
+}
+div#sortContainer{
+    height: 250px;
+    text-align: center;
+    padding-top: 40px;
+}
+button#sortButton{
+    background-color: #339d16;
+    padding: 8px 28px;
+    border: 2px;
+    border-radius: 5px;
+    color:white;
+    font-size: 20px;
+}

@@ -1,0 +1,17 @@
+h2{
+    padding-top:10px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+#algorithmButton{
+    margin-left: 40px;
+    color: white;
+    margin-bottom: 8px;
+    width: 200px;
+    font-size: 15px;
+}
+
+#algorithmButton, .infoButton{
+    display: inline-block;
+}
