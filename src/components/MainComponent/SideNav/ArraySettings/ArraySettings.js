@@ -3,7 +3,7 @@ import "./ArraySettings.css"
 export default function ArraySettings ({
     arrayLength, setArrayLength, settingsSliders, defaultArrayLength, 
     defaultAnimationSpeed, setSettingsSliders, animationSpeed, setAnimationSpeed, 
-    workingArray, setArray
+    workingArray, setArray, userData
 }){
 
     const [defaultClicked, setDefaultClicked] = useState(false)
@@ -31,7 +31,6 @@ export default function ArraySettings ({
     function randomIntGenerator (min,max){
         return Math.floor(Math.random() * (max-min + 1) + min)
     }
-
     
     function handleGenerateArr () {
         let array = []
@@ -40,6 +39,9 @@ export default function ArraySettings ({
         }
         setArray(array)
     }
+
+    const defaultSettingsButton = Object.keys(userData).includes('defaultLength') ? <button onClick={handleDefault}>{defaultClicked? 'Set Different Length and Speed' : 'Switch to Default Settings'}</button> : null
+
 
     return(
         <div className ="arraySettings">
@@ -67,7 +69,7 @@ export default function ArraySettings ({
                 style = {{cursor: "pointer"}}
             ></input>
             <p>{defaultClicked? defaultAnimationSpeed : animationSpeed}</p>
-            <button onClick={handleDefault}>Default Settings</button>
+            {defaultSettingsButton}
             <button id = "generateArr" name = "generateArr" style = {{cursor: "pointer"}} onClick={handleGenerateArr}>Generate New Array</button>
         </div>
     )

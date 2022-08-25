@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "name": "Nathan Something",
+      "name": "Nathan Mosseri",
       "username": "nathan123",
       "password": "password",
       "defaultLength": 100,
@@ -21,8 +21,8 @@
       "username": "test",
       "password": "test",
       "id": 3,
-      "defaultLength": "350",
-      "defaultSpeed": "100"
+      "defaultLength": "",
+      "defaultSpeed": ""
     },
     {
       "name": "Kevin",
@@ -31,6 +31,14 @@
       "id": 4,
       "defaultLength": 100,
       "defaultSpeed": -100
+    },
+    {
+      "name": "Nat",
+      "username": "nat69420",
+      "password": "password",
+      "id": 5,
+      "defaultLength": "327",
+      "defaultSpeed": "80"
     }
   ]
 }

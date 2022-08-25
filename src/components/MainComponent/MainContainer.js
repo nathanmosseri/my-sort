@@ -17,15 +17,16 @@ export default function MainContainer({userId, setLoginSuccess}){
     const[workingArray, setArray] = useState({array: []})
     const [settingsSliders, setSettingsSliders] = useState({
         defaultLength: '',
-        defaultSpeed: ''
+        defaultSpeed: '',
     })
+    const [submitted, setSubmitted] = useState(true)
 
 
     useEffect(()=> {
         fetch(`http://localhost:3000/users/${userId}`)
         .then(res=>res.json())
         .then(data => setUserData(data))
-    },[])
+    },[submitted])
 
     // console.log(widthArrBar)
     // console.log(workingArray)
@@ -56,7 +57,7 @@ export default function MainContainer({userId, setLoginSuccess}){
                 />
                 </Route>
                 <Route exact path='/settings'>
-                    <Settings setUserData={setUserData} userData={userData} settingsSliders={settingsSliders} setSettingsSliders={setSettingsSliders}/>
+                    <Settings setSubmitted={setSubmitted} setUserData={setUserData} userData={userData} settingsSliders={settingsSliders} setSettingsSliders={setSettingsSliders}/>
                 </Route>
                 <Route path='/selection-info'>
                     <SelectionInfo/>

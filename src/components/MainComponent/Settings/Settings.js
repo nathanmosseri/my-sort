@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Settings = ({setUserData, userData, settingsSliders, setSettingsSliders}) => {
+const Settings = ({setUserData, userData, settingsSliders, setSettingsSliders, setSubmitted}) => {
 
-    
 
     const handleSettingsChange = (e) => {
         setSettingsSliders({
             ...settingsSliders,
             [e.target.name]: e.target.value
         })
-        console.log(e.target.value)
     }
 
     const handleSettingsSubmit = (e) => {
@@ -29,10 +27,9 @@ const Settings = ({setUserData, userData, settingsSliders, setSettingsSliders}) 
         })
         .then(res=> res.json())
         .then(data => {
-            
+            setSubmitted(prev => !prev)
         })
     }
-    console.log(settingsSliders)
 
     return (
         <div id="settings">

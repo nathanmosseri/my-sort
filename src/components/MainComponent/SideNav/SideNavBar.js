@@ -19,6 +19,7 @@ export default function SideNavBar({
                 setAnimationSpeed = {setAnimationSpeed}
                 workingArray = {workingArray}
                 setArray = {setArray}
+                userData = {userData}
                 
             />
         </div>
