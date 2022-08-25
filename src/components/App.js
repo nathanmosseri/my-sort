@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import MainContainer from "./MainComponent/MainContainer";
 import '../App.css';
 import LoginSignupContainer from "./loginSignUp/LoginSignupContainer";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
 
@@ -20,8 +21,8 @@ function App() {
   }
 
   const renderedPage = loginSuccess ? 
-    <MainContainer userId={userId}/> 
-    : 
+    <MainContainer userId={userId} setLoginSuccess={setLoginSuccess}/> 
+    :
     <LoginSignupContainer
       usersData = {usersLogin}
       loginSuccess = {loginSuccess}

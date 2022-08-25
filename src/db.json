@@ -4,25 +4,33 @@
       "id": 1,
       "name": "Tsering Tsering",
       "username": "tsering123",
-      "password": "password"
+      "password": "password",
+      "defaultLength": 100,
+      "defaultSpeed": -100
     },
     {
       "id": 2,
       "name": "Nathan Something",
       "username": "nathan123",
-      "password": "password"
+      "password": "password",
+      "defaultLength": 100,
+      "defaultSpeed": -100
     },
     {
       "name": "test",
       "username": "test",
       "password": "test",
-      "id": 3
+      "id": 3,
+      "defaultLength": "350",
+      "defaultSpeed": "100"
     },
     {
       "name": "Kevin",
       "username": "kevinisgay",
       "password": "123",
-      "id": 4
+      "id": 4,
+      "defaultLength": 100,
+      "defaultSpeed": -100
     }
   ]
 }

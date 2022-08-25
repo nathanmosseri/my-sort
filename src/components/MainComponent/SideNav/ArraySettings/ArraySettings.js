@@ -1,7 +1,13 @@
+import { useState } from "react"
 import "./ArraySettings.css"
 export default function ArraySettings ({
-    arrayLength, setArrayLength, animationSpeed, setAnimationSpeed,workingArray, setArray
+    arrayLength, setArrayLength, settingsSliders, defaultArrayLength, 
+    defaultAnimationSpeed, setSettingsSliders, animationSpeed, setAnimationSpeed, 
+    workingArray, setArray
 }){
+
+    const [defaultClicked, setDefaultClicked] = useState(false)
+
     const handleArrLength = (e) =>{
 
         setArrayLength(e.target.value)
@@ -9,7 +15,19 @@ export default function ArraySettings ({
     const handleAnimationSpeed = (e) =>{
         setAnimationSpeed(e.target.value)
     }
-    //random integer generator
+    // random integer generator
+
+    const handleDefault = (e) => {
+        setDefaultClicked(!defaultClicked)
+    }
+
+    const handleSizeAndSpeed = (e) => {
+        setSettingsSliders({
+            ...ArraySettings,
+            [e.target.name]: e.target.value
+        })
+    }
+
     function randomIntGenerator (min,max){
         return Math.floor(Math.random() * (max-min + 1) + min)
     }
@@ -33,9 +51,10 @@ export default function ArraySettings ({
                 max = "350" 
                 name = "arrayLength"
                 style = {{cursor: "pointer"}}
-                value = {arrayLength}
+                value = {defaultClicked? defaultArrayLength : arrayLength}
                 onChange ={handleArrLength}
             ></input>
+            <p>{defaultClicked? defaultArrayLength : arrayLength}</p>
             <p className='labels'>Set Animation Speed</p>
             <input 
                 className = 'slider' 
@@ -43,10 +62,12 @@ export default function ArraySettings ({
                 min = "5" 
                 max = "100" 
                 name = "animationSpeed"
-                value ={animationSpeed}
+                value ={defaultClicked? defaultAnimationSpeed : animationSpeed}
                 onChange={handleAnimationSpeed}
                 style = {{cursor: "pointer"}}
             ></input>
+            <p>{defaultClicked? defaultAnimationSpeed : animationSpeed}</p>
+            <button onClick={handleDefault}>Default Settings</button>
             <button id = "generateArr" name = "generateArr" style = {{cursor: "pointer"}} onClick={handleGenerateArr}>Generate New Array</button>
         </div>
     )

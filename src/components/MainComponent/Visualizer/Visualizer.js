@@ -111,6 +111,7 @@ function mergeSort(){
 }
     if(workingArray.length>0)
     return(
+        <div id = "visualizer">
         <div className="arrContainer">{
             workingArray.map((value,index)=>(
                 <div 
@@ -125,6 +126,7 @@ function mergeSort(){
             )) 
         }
         <button onClick={() => mergeSort()}>Merge Sort</button>
+        </div>
         </div>
     )
 }
