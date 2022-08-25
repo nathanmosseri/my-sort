@@ -19,7 +19,7 @@ export default function MainContainer({userId, setLoginSuccess}){
         defaultLength: '',
         defaultSpeed: '',
     })
-    const [submitted, setSubmitted] = useState(true)
+    const [submitted, setSubmitted] = useState(false)
 
 
     useEffect(()=> {

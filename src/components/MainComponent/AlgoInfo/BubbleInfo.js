@@ -1,14 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
+import { CodeBlock, tomorrowNightBlue } from "react-code-blocks";
 
 const BubbleInfo = () => {
+
+
+const block = () => {
+function bblSort(arr){
+    
+ for(let i = 0; i < arr.length; i++){
+    
+   // Last i elements are already in place 
+   for(let j = 0; j < ( arr.length - i -1 ); j++){
+      
+     // Checking if the item at present iteration
+     // is greater than the next iteration
+     if(arr[j] > arr[j+1]){
+        
+       // If the condition is true then swap them
+       let temp = arr[j]
+       arr[j] = arr[j + 1]
+       arr[j+1] = temp
+     }
+   }
+ }
+}
+ 
+ 
+// This is our unsorted array
+let arr = [234, 43, 55, 63,  5, 6, 235, 547];
+ 
+ 
+// Now pass this array to the bblSort() function
+bblSort(arr);
+}
+
     return (
         <div className="info">
             <Link to='/'>Back</Link>
             <h1 className="sort-info-title">Bubble Sort</h1>
             <img src='https://www.w3resource.com/w3r_images/bubble-short.png' alt="Bubble Sort Graph"/>
             <h3 className="algo-summary">Summary</h3>
-            <h3>Summary</h3>
             <p className="sort-info-paragraph">
                 Bubble sort is a basic algorithm for arranging a string of numbers 
                 or other elements in the correct order. The method works by examining 
@@ -24,6 +57,14 @@ const BubbleInfo = () => {
                 complexity is quite high. But it can work well when sorting 
                 only a small number of elements.
             </p>
+
+            <h3>Bubble Sort Example Code</h3>
+            <CodeBlock 
+            text={block} 
+            language={'javascript'} 
+            showLineNumbers={true} 
+            theme={tomorrowNightBlue}
+            />
 
             <h3>How Bubble Sort Passes Through An Array</h3>
             <p>Consider the array arr = [5, 1, 4, 2, 8]</p>

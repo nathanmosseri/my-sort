@@ -21,8 +21,8 @@
       "username": "test",
       "password": "test",
       "id": 3,
-      "defaultLength": "",
-      "defaultSpeed": ""
+      "defaultLength": "350",
+      "defaultSpeed": "100"
     },
     {
       "name": "Kevin",
