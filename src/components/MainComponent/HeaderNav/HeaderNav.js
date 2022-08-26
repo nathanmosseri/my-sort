@@ -2,9 +2,11 @@ import signOut from "../../images/logout.png"
 import settings from "../../images/settings.png"
 import "./HeaderNav.css"
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
 export default function HeaderNav ({userData, setLoginSuccess}) {
     const handleLogout = () => {
-        setLoginSuccess(prev => !prev)
+        // setLoginSuccess(prev => !prev)
+        window.location.reload()
     }
     return(
         <div id ="headerNav">
@@ -15,7 +17,9 @@ export default function HeaderNav ({userData, setLoginSuccess}) {
                 <p>{`Hello, ${userData.name}!`}</p>
             </div>
             <div className="settings">
-                <img src = {settings} alt ="settings"></img>
+            <NavLink to='/settings'>
+            <img src = {settings} alt ="settings"></img>
+            </NavLink>
             </div>
             <div className = "signOut">
                 <img onClick= {handleLogout} src = {signOut} alt ="signOut"></img>

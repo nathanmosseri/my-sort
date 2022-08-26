@@ -8,6 +8,7 @@ import BubbleInfo from "./Algoinfos/BubbleInfo";
 import MergeInfo from "./Algoinfos/MergeInfo";
 import QuickInfo from "./Algoinfos/QuickInfo";
 import SelectionInfo from "./Algoinfos/SelectionInfo";
+import Settings from "./settings/Settings";
 
 export default function MainContainer({userId, setLoginSuccess}){
     const[userData, setUserData] = useState([])
@@ -22,7 +23,7 @@ export default function MainContainer({userId, setLoginSuccess}){
         fetch(`http://localhost:3000/users/${userId}`)
         .then(res=>res.json())
         .then(data => setUserData(data))
-    },[])
+    },[submitted])
 
     
 console.log(workingArray)
@@ -51,9 +52,9 @@ console.log(workingArray)
                 animationSpeed = {animationSpeed}
             />
             </Route>
-            {/* <Route exact path='/settings'>
+            <Route path='/settings'>
                 <Settings setSubmitted={setSubmitted} submitted={submitted} userData={userData} setUserData = {setUserData}/>
-            </Route> */}
+            </Route>
             <Route path='/selection-info'>
                 <SelectionInfo/>
             </Route>

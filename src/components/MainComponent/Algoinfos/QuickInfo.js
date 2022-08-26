@@ -1,6 +1,8 @@
 import React from "react";
 import { CodeBlock, tomorrowNightBlue } from "react-code-blocks";
 import { Link } from "react-router-dom";
+import './info.css'
+
 
 const QuickInfo = () => {
 
@@ -69,7 +71,7 @@ const QuickInfo = () => {
 
     return (
         <div className="info">
-            <Link to='/'>Back</Link>
+            <Link className="backButton" to='/'>Back</Link>
             <h1 className="sort-info-title">Quick Sort Info</h1>
             <img src="https://cdn-images-1.medium.com/max/600/1*YBBPKTeYJs1eI_4hEhntIg.png" alt="Quick Sort Graph" />
             <h3>Summary</h3>

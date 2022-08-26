@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import { CodeBlock, tomorrowNightBlue } from "react-code-blocks";
+import './info.css'
 
 const BubbleInfo = () => {
 
@@ -38,7 +39,7 @@ bblSort(arr);
 
     return (
         <div className="info">
-            <Link to='/'>Back</Link>
+            <Link className="backButton" to='/'>Back</Link>
             <h1 className="sort-info-title">Bubble Sort</h1>
             <img src='https://www.w3resource.com/w3r_images/bubble-short.png' alt="Bubble Sort Graph"/>
             <h3 className="algo-summary">Summary</h3>

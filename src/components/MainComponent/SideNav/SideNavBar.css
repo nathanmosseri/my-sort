@@ -30,3 +30,9 @@ div#sideNav{
     overflow: auto;
     width: 300px;
 }
+
+.infoLinks {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}

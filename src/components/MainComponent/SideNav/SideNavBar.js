@@ -43,23 +43,24 @@ export default function SideNavBar({
             <button id ="sortButton" onClick={handleSortBtn}>{btnTextContent}</button>
             </div>
         </div>
-        <div id= "algoInfo">
+        <div id= "algoSettings">
 
         <div className = "algoGroup">
+            <h2><u>Learn More About Algorithms</u></h2>
             <div id= "algorithmButton" className = "algorithmButton">
-                <Link to='/selection-info'>Selection Sort</Link></div>
+                <Link className='infoLinks' to='/selection-info'>Selection Sort</Link></div>
             {/* <div className = "infoButton"><Link to='/selection-info'><img src = {infobutton}></img></Link></div> */}
         </div>
         <div className = "algoGroup">
-            <div id= "algorithmButton" className = "algorithmButton"><Link to='/quick-info'>Quick Sort</Link></div>
+            <div id= "algorithmButton" className = "algorithmButton"><Link  className='infoLinks' to='/quick-info'>Quick Sort</Link></div>
             {/* <div className = "infoButton"><Link to='/quick-info'><img src = {infobutton}></img></Link></div> */}
         </div>
         <div className = "algoGroup">
-            <div id= "algorithmButton" className = "algorithmButton"><Link to='/bubble-info'>Bubble Sort</Link></div>
+            <div id= "algorithmButton" className = "algorithmButton"><Link  className='infoLinks' to='/bubble-info'>Bubble Sort</Link></div>
             {/* <div className = "infoButton"><Link to='/bubble-info'><img src = {infobutton}></img></Link></div> */}
         </div>
         <div className = "algoGroup">
-            <div id= "algorithmButton" className = "algorithmButton"><Link to='/merge-info'>Merge Sort</Link></div>
+            <div id= "algorithmButton" className = "algorithmButton"><Link  className='infoLinks' to='/merge-info'>Merge Sort</Link></div>
             {/* <div className = "infoButton"><Link to='/merge-info'><img src = {infobutton}></img></Link></div> */}
         </div>
         </div>

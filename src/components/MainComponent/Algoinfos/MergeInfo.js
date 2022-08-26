@@ -1,6 +1,7 @@
 import React from "react";
 import { CodeBlock, tomorrowNightBlue } from "react-code-blocks";
 import { Link } from "react-router-dom";
+import './info.css'
 
 const MergeInfo = () => {
 
@@ -80,7 +81,7 @@ const MergeInfo = () => {
 
     return (
         <div className="info">
-        <Link to='/'>Back</Link>
+        <Link className="backButton" to='/'>Back</Link>
         <h1 className="sort-info-title">Merge Sort</h1>
             <img src='https://miro.medium.com/max/661/1*7Kox4Bll0Ddvb0td1tiXsg.png' alt="Merge Sort Graph" />
             <h3>Summary</h3>

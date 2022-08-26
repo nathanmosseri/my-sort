@@ -1,0 +1,41 @@
+div#settings{
+    color: black;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 350px;
+    width: 200px;
+    top: 30%;
+    width: 200px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    right: 40%;
+    background-color: #222e597b;
+}
+.formInputs{
+    margin-bottom: 10px;
+    width: 200px;
+    height: 25px;
+    background-color: rgb(207, 207, 207);
+    border: 0px
+}
+
+#submit {
+    border: 2px;
+    background-color: rgb(3, 169, 3);
+    padding: 7px 79px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+#back {
+    color: black;
+    font-size: medium;
+}

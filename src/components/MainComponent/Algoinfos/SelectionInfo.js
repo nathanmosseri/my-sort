@@ -1,6 +1,8 @@
 import React from "react";
 import { CodeBlock, tomorrowNightBlue } from "react-code-blocks";
 import { Link } from "react-router-dom";
+import './info.css'
+
 
 const SelectionInfo = () => {
 
@@ -39,8 +41,8 @@ const SelectionInfo = () => {
 
     return (
         <div className="info">
-        <Link to='/'>Back</Link>
-        <h1 className="sort-info-title">Selection Sort</h1>
+        <Link className="backButton" to='/'>Back</Link>
+        <h1 className="sort-info-title"><u>Selection Sort</u></h1>
             <img src="https://i.stack.imgur.com/5ai2E.jpg" alt="Selection Sort Graph" />
             <h3>Summary</h3>
             <p className="sort-info-paragraph">

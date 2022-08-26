@@ -1,0 +1,14 @@
+div.info {
+    padding: 30px ;
+}
+
+table.time-complexity-table, th, td{
+    border: 1px solid
+}
+
+.backButton {
+    color: rgb(46, 45, 105);
+    text-decoration: none;
+    font-size: 25px;
+    
+}
