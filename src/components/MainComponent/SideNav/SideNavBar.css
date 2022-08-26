@@ -18,4 +18,15 @@ button#sortButton{
     border-radius: 5px;
     color:white;
     font-size: 20px;
+
+}
+div#sideNav{
+    display:flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: #646c9cb8;
+    height: 92vh;
+    max-height: 100%;
+    overflow: auto;
+    width: 300px;
 }

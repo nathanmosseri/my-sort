@@ -5,7 +5,7 @@ import LoginSignupContainer from "./loginSignUp/LoginSignupContainer";
 
 function App() {
 
-  const [loginSuccess, setLoginSuccess] = useState(false)
+  const [loginSuccess, setLoginSuccess] = useState(true)
   const [usersLogin, setUsersData] = useState([])
   const [userId, setUserId] = useState("")
 
@@ -20,7 +20,7 @@ function App() {
   }
 
   const renderedPage = loginSuccess ? 
-    <MainContainer userId={userId}/> 
+    <MainContainer userId={userId} setLoginSuccess={setLoginSuccess}/> 
     : 
     <LoginSignupContainer
       usersData = {usersLogin}

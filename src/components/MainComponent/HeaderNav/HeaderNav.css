@@ -4,12 +4,12 @@
 }
 
 .logo{
-    margin-right: 60%;
+    margin-right:65%;
     margin-left: 2%;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
 }
-.greeting, .settings, .signOut{
+.greeting, .settings{
     margin-right:3%;
 }
 
@@ -18,4 +18,8 @@
     font-size: 30px;
     font-weight: 200;
     margin-left:1%;
+}
+div#headerNav{
+    background-color: #222E59;
+    padding-bottom: 10px;
 }

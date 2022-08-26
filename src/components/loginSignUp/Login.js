@@ -39,7 +39,8 @@ export default function Login ({usersData, loginSuccess, setLoginSuccess, handle
             let correctLogin = !loginSuccess
             setLoginSuccess(correctLogin)
         } else {
-            console.log('doesnt match')
+            alert('Please enter your correct credentials.')
+            setCredential(initialState)
         }
     }
     

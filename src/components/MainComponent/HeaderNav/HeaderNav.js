@@ -1,10 +1,13 @@
 import signOut from "../../images/logout.png"
 import settings from "../../images/settings.png"
 import "./HeaderNav.css"
-export default function HeaderNav ({userData}) {
-    
+import { useState } from "react"
+export default function HeaderNav ({userData, setLoginSuccess}) {
+    const handleLogout = () => {
+        setLoginSuccess(prev => !prev)
+    }
     return(
-        <>
+        <div id ="headerNav">
             <div className = "logo">
                 <h1>@mySORT</h1>
             </div>
@@ -15,9 +18,9 @@ export default function HeaderNav ({userData}) {
                 <img src = {settings} alt ="settings"></img>
             </div>
             <div className = "signOut">
-                <img src = {signOut} alt ="signOut"></img>
+                <img onClick= {handleLogout} src = {signOut} alt ="signOut"></img>
             </div>
-        </>
+        </div>
 
     )
 }

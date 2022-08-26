@@ -1,6 +1,6 @@
 import "./ArraySettings.css"
 export default function ArraySettings ({
-    arrayLength, setArrayLength, animationSpeed, setAnimationSpeed,workingArray, setArray
+    arrayLength, setArrayLength, animationSpeed, setAnimationSpeed, setArray
 }){
     const handleArrLength = (e) =>{
 
@@ -23,25 +23,27 @@ export default function ArraySettings ({
         setArray(array)
     }
 
+    let animTime = animationSpeed*(-1)
+
     return(
         <div className ="arraySettings">
-            <p className='labels'>Set Array Length</p>
+            <p className='labels'>Set Array Length: {`${arrayLength}`}</p>
             <input 
                 className='slider' 
                 type= "range" 
                 min = "5" 
-                max = "350" 
+                max = "300" 
                 name = "arrayLength"
                 style = {{cursor: "pointer"}}
                 value = {arrayLength}
                 onChange ={handleArrLength}
             ></input>
-            <p className='labels'>Set Animation Speed</p>
+            <p className='labels'>Animation Speed: {`${animTime}ms`}</p>
             <input 
                 className = 'slider' 
                 type= "range" 
-                min = "5" 
-                max = "100" 
+                min = "-500" 
+                max = "-1" 
                 name = "animationSpeed"
                 value ={animationSpeed}
                 onChange={handleAnimationSpeed}
